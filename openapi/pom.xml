@@ -10,4 +10,12 @@
     <artifactId>openapi</artifactId>
     <name>openapi</name>
     <url>http://maven.apache.org</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.niiish32x.fxsmsapp</groupId>
+            <artifactId>service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>
