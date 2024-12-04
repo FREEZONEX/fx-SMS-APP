@@ -10,4 +10,8 @@
     <artifactId>dao</artifactId>
     <name>dao</name>
     <url>http://maven.apache.org</url>
+
+    <dependencies>
+
+    </dependencies>
 </project>
