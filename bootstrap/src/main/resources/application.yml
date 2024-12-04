@@ -7,8 +7,15 @@ spring:
     basename: i18n/notificationSMS
   application:
     name: notification-sms
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url:  jdbc:mysql://127.0.0.1:3306/sms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+
 server:
   port: 8080
+
 
 supfusion:
   supos:

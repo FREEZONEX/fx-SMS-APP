@@ -1,6 +1,7 @@
 package org.niiish32x.fxsmsapp.LocalMessage.persistence;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
@@ -26,16 +27,32 @@ import java.util.Date;
 @AllArgsConstructor
 public class LocalMessageDO {
     /**
-     * 自增主键
+     * 自增主键，对应表中的id字段
      */
     @TableId(type = IdType.AUTO)
     private Long id;
 
+    /**
+     * 消息内容字段，对应表中的message_content字段，设置了非空约束，使用@TableField注解指定
+     */
+    @TableField("message_content")
     private String messageContent;
 
+    /**
+     * 状态字段，对应表中的status字段，设置了非空约束且有默认值，使用@TableField注解指定
+     */
+    @TableField("status")
     private String status;
 
-    Date created_at;
+    /**
+     * 创建时间字段，对应表中的created_at字段，有默认值，使用@TableField注解指定
+     */
+    @TableField("created_at")
+    private Date createdAt;
 
-    Date updated_at;
+    /**
+     * 更新时间字段，对应表中的updated_at字段，有默认值且会在更新时自动更新，使用@TableField注解指定
+     */
+    @TableField("updated_at")
+    private Date updatedAt;
 }
