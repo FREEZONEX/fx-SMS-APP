@@ -1,0 +1,9 @@
+apiVersion: v3alpha1
+vendor: 
+  bluetronId: default
+  organization: bluetron
+  url: http://www.supos.net
+  email: admin@supos.net
+  copyright: bluetron (c) 2019
+  address: 浙江省杭州市滨江区六和路309号中控科技园F22
+  showName: 蓝卓
