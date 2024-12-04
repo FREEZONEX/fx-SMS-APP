@@ -1,4 +1,4 @@
-package org.niiish32x.fxsmsapp;
+package org.niiish32x.fxsmsapp.config;
 
 /**
  * Constants

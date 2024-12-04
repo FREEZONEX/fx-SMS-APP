@@ -1,4 +1,4 @@
-package org.niiish32x.fxsmsapp.utils;
+package org.niiish32x.fxsmsapp.config.utils;
 
 import lombok.extern.slf4j.Slf4j;
 

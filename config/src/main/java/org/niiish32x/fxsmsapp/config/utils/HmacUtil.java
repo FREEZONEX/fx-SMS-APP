@@ -1,4 +1,4 @@
-package org.niiish32x.fxsmsapp.utils;
+package org.niiish32x.fxsmsapp.config.utils;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
