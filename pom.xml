@@ -9,7 +9,6 @@
     <name>fx-SMS-APP</name>
     <description>fx-SMS-APP</description>
     <modules>
-
         <module>bootstrap</module>
         <module>common</module>
         <module>config</module>
@@ -17,16 +16,49 @@
         <module>manager</module>
         <module>openapi</module>
         <module>service</module>
-    </modules>
+     </modules>
 
     <properties>
         <java.version>1.8</java.version>
+        <mybatis-plus.version>3.5.9</mybatis-plus.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.6.13</spring-boot.version>
         <spring-cloud.version>2021.0.5</spring-cloud.version>
+        <supos.admin-api>D:\project\fx-SMS-APP\admin-api-4.2.1.1.RELEASE.jar</supos.admin-api>
+        <supos.notification-protocol>D:\project\fx-SMS-APP\notification-protocol-1.0.3.jar</supos.notification-protocol>
     </properties>
     <dependencies>
+
+        <dependency>
+            <groupId>com.supcon.supfusion.notification</groupId>
+            <artifactId>admin-api</artifactId>
+            <version>4.2.1.1</version>
+            <scope>system</scope>
+            <systemPath>${supos.admin-api}</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.supcon.supfusion.notification</groupId>
+            <artifactId>notification-protocol</artifactId>
+            <version>1.0.3-RELEASE</version>
+            <scope>system</scope>
+            <systemPath>${supos.notification-protocol}</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+            <version>2.0.53</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+            <version>${mybatis-plus.version}</version>
+        </dependency>
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

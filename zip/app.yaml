@@ -1,0 +1,7 @@
+apiVersion: v3alpha1
+name: twilio
+showName: Twilio SMS
+appVersion: 1.00.02.00
+description: 
+icon: /statics/icon.png
+vendorName: supos

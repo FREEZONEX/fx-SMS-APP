@@ -1,0 +1,61 @@
+management:
+  health:
+    db:
+      enabled: false
+spring:
+  messages:
+    basename: i18n/notificationSMS
+  application:
+    name: notification-sms
+server:
+  port: 8080
+
+supfusion:
+  supos:
+    ak: ${SUPOS_APP_ACCOUNT_ID:default}
+    sk: ${SUPOS_APP_SECRET_KEY:default}
+    supos-host: ${SUPOS_ADDRESS:http://localhost:8080}
+    appId: ${SUPOS_APP_ID:605fd270fb5b3563411572db01634214}
+  cloud:
+    registry:
+      enabled: true
+      secure: false
+      weight: 1
+      group: DEFAULT_GROUP
+    i18n:
+      enabled: false
+      host: http://i18n-service.default.svc.cluster.local:8080
+      locale-module: notificationSMS
+      module-version: notificationSMS20210407
+      basename: i18n/
+      use-get-all-module: true
+      modules:
+        - notificationSMS
+    discovery:
+      enabled: true
+      group: DEFAULT_GROUP
+    nacos:
+      server-addr: nacos:8848
+      username: nacos
+      password: nacos
+  swagger:
+    enable: false
+mybatis-plus:
+  type-aliases-package: com.supcon.supfusion.notification.wechat.po
+  configuration:
+    log-impl:
+    map-underscore-to-camel-case: true
+  global-config:
+    banner: false
+    db-config:
+      logic-delete-enabled: false
+      optimistic-lock-enabled: false
+logging:
+  level:
+    com:
+      supcon:
+        supfusion:
+          notification:
+            admin:
+              openapi:
+                feign: debug
