@@ -7,6 +7,8 @@ package org.niiish32x.fxsmsapp.result;
  * @date 2024.12.04 15:29
  */
 
+import com.supcon.supfusion.notification.protocol.model.Ack;
+
 import java.io.Serializable;
 
 /**
@@ -42,6 +44,12 @@ public class Result<T> implements Serializable {
 
 
     public static <T> Result<T> success() {
+        Result result = new Result<T>();
+        result.setResultCode(ResultCodeEnum.SUCCESS);
+        return result;
+    }
+
+    public static <T> Result<T> success(Ack ack) {
         Result result = new Result<T>();
         result.setResultCode(ResultCodeEnum.SUCCESS);
         return result;
