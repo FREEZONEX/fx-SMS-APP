@@ -10,6 +10,7 @@ import org.apache.ibatis.type.JdbcType;
  * @author shenghao ni
  * @date 2024.12.04 14:44
  */
+@Deprecated
 public class BaseEntity  {
 
     private static final long serialVersionUID = -599070085404429053L;

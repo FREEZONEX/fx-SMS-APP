@@ -16,6 +16,7 @@ import java.util.Date;
  */
 @Mapper
 @Repository("smsNoticeMessageUnreadCountMapper")
+@Deprecated
 public interface NoticeMessageUnreadCountMapper extends BaseMapper<NoticeMessageUnreadCountMapper> {
     @Update("update notice_message_unread_count " +
             "set unread_count = unread_count + 1 ,modify_time = #{updateTime} " +

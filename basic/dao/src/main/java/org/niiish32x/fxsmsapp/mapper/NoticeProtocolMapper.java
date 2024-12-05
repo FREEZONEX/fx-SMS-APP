@@ -13,5 +13,6 @@ import org.springframework.stereotype.Repository;
  */
 @Mapper
 @Repository("smsNoticeProtocolMapper")
+@Deprecated
 public interface NoticeProtocolMapper extends BaseMapper<NoticeProtocol> {
 }
