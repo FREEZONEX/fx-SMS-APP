@@ -26,6 +26,7 @@
         <fastjson2.version>2.0.53</fastjson2.version>
         <org.apache.commons.version>3.17.0</org.apache.commons.version>
         <com.google.guava.version>33.3.1-jre</com.google.guava.version>
+        <cn.hutool.version>5.8.26</cn.hutool.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.6.13</spring-boot.version>
@@ -34,6 +35,8 @@
         <supos.notification-protocol>D:\project\fx-SMS-APP\notification-protocol-1.0.3.jar</supos.notification-protocol>
     </properties>
     <dependencies>
+
+
 
         <dependency>
             <groupId>com.supcon.supfusion.notification</groupId>
@@ -50,6 +53,14 @@
             <scope>system</scope>
             <systemPath>${supos.notification-protocol}</systemPath>
         </dependency>
+
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${cn.hutool.version}</version>
+        </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
         <dependency>
