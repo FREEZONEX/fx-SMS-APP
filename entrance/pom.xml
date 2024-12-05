@@ -8,7 +8,7 @@
     </parent>
     <artifactId>entrance</artifactId>
     <packaging>pom</packaging>
-    <name>Archetype - entrance</name>
+    <name> entrance</name>
     <url>http://maven.apache.org</url>
 
 
