@@ -81,7 +81,7 @@ public class Result<T> implements Serializable {
 
     public void setResultCode(ResultCodeEnum code) {
         this.code = code.code();
-        this.msg = code.message();
+//        this.msg = code.message();
     }
 
     // 自定义返回数据

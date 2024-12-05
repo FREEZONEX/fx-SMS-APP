@@ -1,5 +1,6 @@
 package org.niiish32x.fxsmsapp.org.niiish32x.fxsmsapp.sms.app.impl;
 
+import com.alibaba.fastjson2.JSON;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.niiish32x.fxsmsapp.result.Result;
@@ -29,6 +30,6 @@ public class SendTest {
     public void sendTest() {
         Result result = sendSMSCService.send(number, text);
 
-        System.out.println(result);
+        System.out.println(JSON.toJSON(result));
     }
 }

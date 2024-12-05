@@ -32,21 +32,25 @@ public class SendSMSCServiceImpl implements SendSMSCService {
 
     private static final String URL = "http://cloudsms.zubrixtechnologies.com/api/mt/GetBalance";
 
+    private static final String APIKEY = "hyRZM0cdlk2Ey4FzBM6qiA";
+
     @Override
     public Result send(String number, String text) {
         Map<String, Object> paramMap = buildPostBody(number, text);
-        String post = HttpUtil.post(URL, paramMap);
-        return Result.success(post);
+        String res = HttpRequest.get(URL).form(paramMap).timeout(2000).execute().body();
+        return Result.success(res);
     }
 
     Map<String,Object> buildPostBody(String number,String text){
         Map<String,Object> paramMap = new HashMap<>();
         paramMap.put("senderid",SEND_ID);
         paramMap.put("channel",CHANNEL);
-        paramMap.put("ak",AK);
-        paramMap.put("sk",SK);
         paramMap.put("number",number);
         paramMap.put("text",text);
+        paramMap.put("APIKey",APIKEY);
+        paramMap.put("DCS","");
+        paramMap.put("flashsms","0");
+        paramMap.put("route","15");
         return paramMap;
     }
 }
