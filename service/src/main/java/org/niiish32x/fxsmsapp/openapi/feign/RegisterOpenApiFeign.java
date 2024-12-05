@@ -8,6 +8,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * RegisterOpenApiFeign
@@ -26,6 +27,5 @@ public interface RegisterOpenApiFeign {
      */
     @PostMapping(value = "/open-api/notification-admin/v2/register")
     Result<RegisterResponseVO> register(@RequestHeader(name = "X-Tenant-Id") String suposAppTenantId, @RequestBody ProtocolConfigVO arg0);
-
 
 }

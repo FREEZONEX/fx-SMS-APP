@@ -27,7 +27,7 @@ public class ClientConfiguration {
     @Autowired
     SuposConfiguration suposConfiguration;
 
-    @Value("${SUPOS_APP_TENANT_ID:dt}")
+//    @Value("${SUPOS_APP_TENANT_ID:dt}")
     String SUPOS_APP_TENANT_ID;
 
     @Bean

@@ -6,31 +6,15 @@
         <artifactId>fx-SMS-APP</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>org.niiish32x.fxsmsapp</groupId>
-    <artifactId>service</artifactId>
-    <name>service</name>
+    <artifactId>entrance</artifactId>
+    <name>Archetype - entrance</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>
-<!--        <dependency>-->
-<!--            <groupId>org.niiish32x.fxsmsapp</groupId>-->
-<!--            <artifactId>openapi</artifactId>-->
-<!--            <version>0.0.1-SNAPSHOT</version>-->
-<!--        </dependency>-->
-
         <dependency>
             <groupId>org.niiish32x.fxsmsapp</groupId>
-            <artifactId>config</artifactId>
+            <artifactId>service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-
-
-
-        <dependency>
-            <groupId>org.niiish32x.fxsmsapp</groupId>
-            <artifactId>common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
     </dependencies>
 </project>

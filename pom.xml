@@ -16,6 +16,8 @@
         <module>openapi</module>
         <module>service</module>
         <module>basic</module>
+        <module>entrance</module>
+
     </modules>
 
     <properties>

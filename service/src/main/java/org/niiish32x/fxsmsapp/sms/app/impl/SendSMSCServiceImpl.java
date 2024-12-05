@@ -4,7 +4,7 @@ import cn.hutool.core.map.MapUtil;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.http.impl.client.CloseableHttpClient;
+
 import org.niiish32x.fxsmsapp.result.Result;
 import org.niiish32x.fxsmsapp.sms.app.SendSMSCService;
 import org.springframework.stereotype.Service;

@@ -2,6 +2,8 @@ package org.niiish32x.fxsmsapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+
 
 @SpringBootApplication(scanBasePackages = "org.niiish32x.fxsmsapp")
 public class Bootstrap {
