@@ -10,9 +10,7 @@
     <packaging>pom</packaging>
     <name>Archetype - entrance</name>
     <url>http://maven.apache.org</url>
-    <modules>
-        <module>web</module>
-    </modules>
+
 
     <dependencies>
         <dependency>

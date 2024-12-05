@@ -3,20 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.niiish32x.fxsmsapp</groupId>
-        <artifactId>fx-SMS-APP</artifactId>
+        <artifactId>basic</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>org.niiish32x.fxsmsapp</groupId>
     <artifactId>common</artifactId>
-    <name>common</name>
+    <name>Archetype - common2</name>
     <url>http://maven.apache.org</url>
-
-    <dependencies>
-
-
-
-
-
-    </dependencies>
-
 </project>
