@@ -1,4 +1,4 @@
-package org.niiish32x.fxsmsapp.LocalMessage.persistence;
+package org.niiish32x.fxsmsapp.localMessage.persistence;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

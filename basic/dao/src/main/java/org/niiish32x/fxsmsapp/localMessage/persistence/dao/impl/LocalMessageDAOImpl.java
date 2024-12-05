@@ -1,9 +1,9 @@
-package org.niiish32x.fxsmsapp.LocalMessage.persistence.dao.impl;
+package org.niiish32x.fxsmsapp.localMessage.persistence.dao.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.niiish32x.fxsmsapp.LocalMessage.persistence.LocalMessageDO;
-import org.niiish32x.fxsmsapp.LocalMessage.persistence.dao.LocalMessageDAO;
-import org.niiish32x.fxsmsapp.LocalMessage.persistence.mapper.LocalMessageMapper;
+import org.niiish32x.fxsmsapp.localMessage.persistence.LocalMessageDO;
+import org.niiish32x.fxsmsapp.localMessage.persistence.dao.LocalMessageDAO;
+import org.niiish32x.fxsmsapp.localMessage.persistence.mapper.LocalMessageMapper;
 import org.springframework.stereotype.Component;
 
 /**

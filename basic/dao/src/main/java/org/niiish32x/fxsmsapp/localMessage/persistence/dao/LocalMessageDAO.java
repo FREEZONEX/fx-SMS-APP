@@ -1,7 +1,7 @@
-package org.niiish32x.fxsmsapp.LocalMessage.persistence.dao;
+package org.niiish32x.fxsmsapp.localMessage.persistence.dao;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import org.niiish32x.fxsmsapp.LocalMessage.persistence.LocalMessageDO;
+import org.niiish32x.fxsmsapp.localMessage.persistence.LocalMessageDO;
 
 /**
  * LocalMessageDAO

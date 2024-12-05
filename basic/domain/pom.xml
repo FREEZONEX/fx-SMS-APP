@@ -3,15 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.niiish32x.fxsmsapp</groupId>
-        <artifactId>fx-SMS-APP</artifactId>
+        <artifactId>basic</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>org.niiish32x.fxsmsapp</groupId>
-    <artifactId>dao</artifactId>
-    <name>dao</name>
+    <artifactId>domain</artifactId>
+    <name>Archetype - domain</name>
     <url>http://maven.apache.org</url>
-
-    <dependencies>
-
-    </dependencies>
 </project>

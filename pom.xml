@@ -12,11 +12,11 @@
         <module>bootstrap</module>
         <module>common</module>
         <module>config</module>
-        <module>dao</module>
         <module>manager</module>
         <module>openapi</module>
         <module>service</module>
-     </modules>
+        <module>basic</module>
+    </modules>
 
     <properties>
         <java.version>1.8</java.version>

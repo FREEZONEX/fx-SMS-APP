@@ -1,8 +1,7 @@
-package org.niiish32x.fxsmsapp.LocalMessage.persistence.mapper;
+package org.niiish32x.fxsmsapp.localMessage.persistence.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.niiish32x.fxsmsapp.LocalMessage.persistence.LocalMessageDO;
-import org.niiish32x.fxsmsapp.LocalMessage.persistence.dao.LocalMessageDAO;
+import org.niiish32x.fxsmsapp.localMessage.persistence.LocalMessageDO;
 
 /**
  * LocalMessageMapper
