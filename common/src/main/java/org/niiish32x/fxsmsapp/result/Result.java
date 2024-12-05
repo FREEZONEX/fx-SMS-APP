@@ -7,6 +7,9 @@ package org.niiish32x.fxsmsapp.result;
  * @date 2024.12.04 15:29
  */
 
+import com.supcon.supfusion.notification.protocol.model.Ack;
+import lombok.Builder;
+
 import java.io.Serializable;
 
 /**
@@ -15,6 +18,7 @@ import java.io.Serializable;
  * @Author: Yanggc
  * DateTime: 10/22 13:52
  */
+
 public class Result<T> implements Serializable {
     private static final long serialVersionUID = -3948389268046368059L;
 
@@ -47,6 +51,19 @@ public class Result<T> implements Serializable {
         return result;
     }
 
+    public static <T> Result<T> success(Ack ack) {
+        Result result = new Result<T>();
+        result.setResultCode(ResultCodeEnum.SUCCESS);
+        return result;
+    }
+
+    public static <T> Result<T> success(String msg) {
+        Result result = new Result<T>();
+        result.setMsg(msg);
+        result.setResultCode(ResultCodeEnum.SUCCESS);
+        return result;
+    }
+
     public static <T> Result<T> failure(ResultCodeEnum resultCodeEnum) {
         Result result = new Result();
         result.setResultCode(resultCodeEnum);
@@ -64,7 +81,7 @@ public class Result<T> implements Serializable {
 
     public void setResultCode(ResultCodeEnum code) {
         this.code = code.code();
-        this.msg = code.message();
+//        this.msg = code.message();
     }
 
     // 自定义返回数据

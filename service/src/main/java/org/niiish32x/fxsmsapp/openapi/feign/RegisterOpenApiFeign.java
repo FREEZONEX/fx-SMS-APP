@@ -3,7 +3,7 @@ package org.niiish32x.fxsmsapp.openapi.feign;
 import org.niiish32x.fxsmsapp.openapi.vo.ProtocolConfigVO;
 import org.niiish32x.fxsmsapp.result.Result;
 import org.niiish32x.fxsmsapp.openapi.vo.RegisterResponseVO;
-import org.niiish32x.fxsmsapp.sms.service.runner.ClientConfiguration;
+import org.niiish32x.fxsmsapp.runner.ClientConfiguration;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

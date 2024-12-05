@@ -1,33 +1,22 @@
-package org.niiish32x.fxsmsapp.sms.service.impl;
+package org.niiish32x.fxsmsapp.sms.app.impl;
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.collect.ImmutableMap;
 import com.supcon.supfusion.notification.protocol.common.ReadStatus;
-import com.supcon.supfusion.notification.protocol.common.SendStatus;
 import com.supcon.supfusion.notification.protocol.model.Ack;
-import com.supcon.supfusion.notification.protocol.model.AckResult;
 import com.supcon.supfusion.notification.protocol.model.Notice;
-import com.supcon.supfusion.notification.protocol.model.Receiver;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.apache.commons.lang3.tuple.Triple;
 import org.niiish32x.fxsmsapp.CachabledOptional;
-import org.niiish32x.fxsmsapp.sms.service.SmsService;
-import org.niiish32x.fxsmsapp.sms.service.runner.ConfigRunner;
+import org.niiish32x.fxsmsapp.sms.app.ReceiverService;
+import org.niiish32x.fxsmsapp.runner.ConfigRunner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
-import java.net.InetSocketAddress;
-import java.net.Socket;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
 
 /**
  * SmsServiceImpl
@@ -37,7 +26,7 @@ import java.util.stream.Collectors;
  */
 @Service
 @Slf4j
-public class SmsServiceImpl implements SmsService {
+public class ReceiverServiceImpl implements ReceiverService {
 
     @Autowired
     ConfigRunner configRunner;
@@ -70,7 +59,8 @@ public class SmsServiceImpl implements SmsService {
 
     @Override
     public Ack send(Notice notice) {
-
+        String content = notice.getContent();
+        System.out.println(content);
         return Ack.buildSuccess(notice,ReadStatus.READ);
     }
 }

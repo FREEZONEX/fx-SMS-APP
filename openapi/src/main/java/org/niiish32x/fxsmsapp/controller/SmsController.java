@@ -2,13 +2,13 @@ package org.niiish32x.fxsmsapp.controller;
 
 import com.supcon.supfusion.notification.protocol.model.Ack;
 import com.supcon.supfusion.notification.protocol.model.Notice;
+import org.niiish32x.fxsmsapp.result.Result;
+import org.niiish32x.fxsmsapp.sms.app.ReceiverService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Map;
 
 /**
  * SmsController
@@ -20,7 +20,7 @@ import java.util.Map;
 @RestController("/open-api/notification")
 public class SmsController {
     @Autowired
-    SmsService smsService;
+    ReceiverService smsService;
 
 
     @PostMapping("/sms")
@@ -30,12 +30,12 @@ public class SmsController {
     }
 
 
-    @PostMapping("/sms/test")
-    @ResponseBody
-    public Result<Void> test(@RequestBody Map<String, String> notice) {
-
-        smsService.test(notice.get("sid"),notice.get("token"),notice.get("mobile"));
-        return Result.success(null);
-    }
+//    @PostMapping("/sms/test")
+//    @ResponseBody
+//    public Result<Void> test(@RequestBody Map<String, String> notice) {
+//
+//        smsService.test(notice.get("sid"),notice.get("token"),notice.get("mobile"));
+//        return Result.success(null);
+//    }
 
 }

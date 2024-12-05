@@ -10,4 +10,13 @@
     <artifactId>common</artifactId>
     <name>common</name>
     <url>http://maven.apache.org</url>
+
+    <dependencies>
+
+
+
+
+
+    </dependencies>
+
 </project>

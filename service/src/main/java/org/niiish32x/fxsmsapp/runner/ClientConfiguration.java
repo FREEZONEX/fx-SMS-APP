@@ -1,4 +1,4 @@
-package org.niiish32x.fxsmsapp.sms.service.runner;
+package org.niiish32x.fxsmsapp.runner;
 
 import feign.RequestInterceptor;
 import lombok.Value;
