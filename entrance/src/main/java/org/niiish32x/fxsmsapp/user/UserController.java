@@ -1,5 +1,6 @@
-package org.niiish32x.fxsmsapp.controller;
+package org.niiish32x.fxsmsapp.user;
 
+import com.alibaba.fastjson2.JSON;
 import org.niiish32x.fxsmsapp.user.app.UserService;
 import org.niiish32x.fxsmsapp.user.app.dto.UserDTO;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,9 +14,8 @@ import java.util.List;
  * UserController
  *
  * @author shenghao ni
- * @date 2024.12.05 16:22
+ * @date 2024.12.05 16:59
  */
-
 @RestController
 public class UserController {
 
@@ -23,10 +23,11 @@ public class UserController {
     UserService userService;
 
     @RequestMapping("/test/user")
-    public List<UserDTO>  getUserFromSupos () {
+    public List<UserDTO> getUsersFromSupos(){
         List<UserDTO> userDTOS = userService.geyUsersFromSupos();
-        System.out.println(userDTOS);
-        System.out.println("xxx");
-        return new ArrayList<>();
+        for (UserDTO userDTO : userDTOS) {
+            System.out.println(JSON.toJSONString(userDTO));
+        }
+        return userDTOS;
     }
 }
