@@ -7,9 +7,13 @@ import lombok.extern.slf4j.Slf4j;
 
 import org.niiish32x.fxsmsapp.result.Result;
 import org.niiish32x.fxsmsapp.sms.app.SendSMSCService;
+import org.niiish32x.fxsmsapp.user.app.UserService;
+import org.niiish32x.fxsmsapp.user.app.dto.UserDTO;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -26,19 +30,27 @@ public class SendSMSCServiceImpl implements SendSMSCService {
 
     private static final String CHANNEL = "Transactional";
 
-    private static final String AK = "73101af46504b78d84d3b12fab482777";
-
-    private static final String SK = "50fdd25963042ace27d3963cbe78c065";
-
     private static final String URL = "http://cloudsms.zubrixtechnologies.com/api/mt/GetBalance";
 
     private static final String APIKEY = "hyRZM0cdlk2Ey4FzBM6qiA";
+
+    @Resource
+    UserService userService;
 
     @Override
     public Result send(String number, String text) {
         Map<String, Object> paramMap = buildPostBody(number, text);
         String res = HttpRequest.get(URL).form(paramMap).timeout(2000).execute().body();
         return Result.success(res);
+    }
+
+    @Override
+    public Result sendToSugarSmsUsers(String number, String text) throws Exception {
+        List<UserDTO> sugarSmsUsersFromSupos = userService.getSugarSmsUsersFromSupos();
+        for (UserDTO userDTO : sugarSmsUsersFromSupos){
+
+        }
+        return null;
     }
 
     Map<String,Object> buildPostBody(String number,String text){

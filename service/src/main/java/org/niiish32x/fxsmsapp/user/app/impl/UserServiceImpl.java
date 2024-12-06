@@ -9,14 +9,17 @@ import com.alibaba.fastjson2.JSONObject;
 
 import com.alibaba.fastjson2.annotation.JSONField;
 import lombok.Data;
+import org.apache.commons.lang3.StringUtils;
 import org.niiish32x.fxsmsapp.aksk.SignUtil;
 import org.niiish32x.fxsmsapp.aksk.SignUtils;
 import org.niiish32x.fxsmsapp.user.app.UserService;
+import org.niiish32x.fxsmsapp.user.app.dto.RoleDTO;
 import org.niiish32x.fxsmsapp.user.app.dto.UserDTO;
 
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -51,7 +54,11 @@ public class UserServiceImpl implements UserService {
     }
 
 
-
+    /**
+     * 从supos中获取指定 公司下所有 员工的信息
+     * @return
+     * @throws Exception
+     */
     @Override
     public List<UserDTO> geyUsersFromSupos() throws Exception {
         Map<String,String> paramMap = new HashMap<>();
@@ -72,6 +79,24 @@ public class UserServiceImpl implements UserService {
         }
 
         return pagination.getUserDTOS();
+    }
+
+    @Override
+    public List<UserDTO> getSugarSmsUsersFromSupos() throws Exception {
+        List<UserDTO> userDTOS = geyUsersFromSupos();
+
+        List<UserDTO> sugarSmsUserDTO = new ArrayList<>();
+
+        for (UserDTO userDTO : userDTOS) {
+            for (RoleDTO roleDTO : userDTO.getUserRoleList()) {
+                if (StringUtils.equals(roleDTO.getName(),"sugarsms")) {
+                    sugarSmsUserDTO.add(userDTO);
+                    break;
+                }
+            }
+         }
+
+        return sugarSmsUserDTO;
     }
 
     Map<String,String> buildGetParam(){

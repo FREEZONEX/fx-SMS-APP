@@ -13,4 +13,6 @@ import java.util.List;
  */
 public interface UserService {
     List<UserDTO> geyUsersFromSupos() throws Exception;
+
+    List<UserDTO> getSugarSmsUsersFromSupos () throws Exception;
 }

@@ -23,4 +23,12 @@ public interface SendSMSCService {
      * @return
      */
     Result send(String number,String text);
+
+    /**
+     *
+     * @param number 电话号码
+     * @param text 短信内容
+     * @return
+     */
+    Result sendToSugarSmsUsers(String number,String text) throws Exception;
 }
