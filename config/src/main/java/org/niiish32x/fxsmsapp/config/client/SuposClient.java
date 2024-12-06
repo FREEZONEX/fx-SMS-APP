@@ -3,7 +3,8 @@ package org.niiish32x.fxsmsapp.config.client;
 import com.supcon.supfusion.notification.protocol.util.UrlUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.niiish32x.fxsmsapp.config.SuposConfiguration;
-import org.niiish32x.fxsmsapp.config.utils.AKSKUtil;
+
+import org.niiish32x.fxsmsapp.config.util.AKSKUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

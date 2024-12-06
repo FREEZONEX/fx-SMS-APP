@@ -4,7 +4,8 @@ import feign.RequestInterceptor;
 import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
 import org.niiish32x.fxsmsapp.config.SuposConfiguration;
-import org.niiish32x.fxsmsapp.config.utils.AKSKUtil;
+
+import org.niiish32x.fxsmsapp.config.util.AKSKUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

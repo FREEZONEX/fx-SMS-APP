@@ -1,4 +1,4 @@
-package org.niiish32x.fxsmsapp.config.utils;
+package org.niiish32x.fxsmsapp.config.util;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
@@ -7,10 +7,8 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * HmacUtil
- *
- * @author shenghao ni
- * @date 2024.12.04 11:30
+ * @author tomcat - <huangjianbo@supcon.com>
+ * @date 19-11-11 下午6:11
  */
 public final class HmacUtil {
 
@@ -53,4 +51,3 @@ public final class HmacUtil {
         return out;
     }
 }
-

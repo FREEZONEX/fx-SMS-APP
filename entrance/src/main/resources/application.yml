@@ -14,7 +14,12 @@ spring:
     url:  jdbc:mysql://127.0.0.1:3306/sms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
 
 server:
-  port: 8080
+  port: 8088
+
+supos:
+  supos-address: http://47.129.0.177:8080
+  app-id: 4d4384283dc193f39d6b95b5db1b8940
+  app-secret: 10999785ab1c5f475c6d9c8b728e28a3
 
 
 supfusion:

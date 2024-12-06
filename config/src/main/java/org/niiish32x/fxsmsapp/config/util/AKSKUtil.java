@@ -1,13 +1,7 @@
-package org.niiish32x.fxsmsapp.config.utils;
+package org.niiish32x.fxsmsapp.config.util;
 
 import lombok.extern.slf4j.Slf4j;
 
-/**
- * AKSKUtil
- *
- * @author shenghao ni
- * @date 2024.12.04 11:30
- */
 @Slf4j
 public class AKSKUtil {
     public static String signature(String sk, String method, String uri, String contentType, String queryString, String customHeaders, String requestBodyPayload) {
