@@ -12,5 +12,5 @@ import java.util.List;
  * @date 2024.12.05 16:24
  */
 public interface UserService {
-    List<UserDTO> geyUsersFromSupos();
+    List<UserDTO> geyUsersFromSupos() throws Exception;
 }

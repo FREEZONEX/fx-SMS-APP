@@ -23,7 +23,7 @@ public class UserController {
     UserService userService;
 
     @RequestMapping("/test/user")
-    public List<UserDTO> getUsersFromSupos(){
+    public List<UserDTO> getUsersFromSupos() throws Exception {
         List<UserDTO> userDTOS = userService.geyUsersFromSupos();
         for (UserDTO userDTO : userDTOS) {
             System.out.println(JSON.toJSONString(userDTO));
