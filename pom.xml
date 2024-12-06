@@ -11,7 +11,9 @@
     <modules>
 
 
-
+        <module>sms-app</module>
+        <module>openapi</module>
+        <module>basic</module>
     </modules>
 
     <properties>
